@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivina</title>
+</head>
+<body>
+  <h1>Adivina</h1>
+  <form action="{% url 'guess' %}" method="post">
+    {% csrf_token %}
+    <label for="number">Introduce un número entre 0 y 10</label>
+    <br>
+    <input type="number" name="number">
+    <button type="submit">Adivinar</button>
+  </form>
+</body>
+</html>
